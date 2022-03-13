@@ -9,6 +9,12 @@
 # -------
 import os
 
+# requirements
+# ------------
+
+with open('requirements.txt') as f:
+    REQUIREMENTS = f.read().strip().split('\n')
+
 # config
 # ------
 try:
@@ -31,8 +37,8 @@ setup(
     author="Suliman Sharif",
     author_email="sharifsuliman1@gmail.com",
     url="https://www.github.com/Sulstice/dimorphite_dl",
-    install_requires=[],
     long_description=long_description,
+    install_requires=REQUIREMENTS,
     long_description_content_type='text/markdown',
     zip_safe=False,
     keywords='smiles molecules chemistry',
