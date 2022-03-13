@@ -1,6 +1,15 @@
 Changes
 =======
 
+1.2.5
+-----
+
+* Added a DimorphiteDL class and removed the reader for the argument passing for the mainline command. Just to keep this easier
+to maintain
+* Moved the site_substructure smarts file into a one string with a textwrap dependency
+* Added PyPi basic setup infrastructure with MANIFEST.in, requirements.txt, and setup.py. Maintained the Apache License.
+* Added the rdkit -pypi dependency. 
+
 1.2.4
 -----
 

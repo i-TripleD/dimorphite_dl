@@ -25,6 +25,33 @@ Licensing
 Dimorphite-DL is released under the Apache 2.0 license. See LICENCE.txt for
 details.
 
+Installation
+------------
+
+**Edit** This edit is made by Sulstice for distribution and installation.
+
+```python
+
+pip install dimorphite_dl
+
+```
+
+QuickStart
+----------
+
+**Edit** This edit is made by Sulstice for distribution and installation.
+
+
+```python
+
+dimorphite_dl = DimorphiteDL()
+print(dimorphite_dl.protonate('CC(=O)O'))
+
+>>>
+['CC(=O)[O-]']
+
+
+```
 Usage
 -----
 
@@ -71,11 +98,11 @@ It is also possible to access Dimorphite-DL from another Python script, rather
 than from the command line. Here's an example:
 
 ```python
-from rdkit import Chem
 import dimorphite_dl
 
 # Using the dimorphite_dl.run() function, you can run Dimorphite-DL exactly as
 # you would from the command line. Here's an example:
+
 dimorphite_dl.run(
    smiles="CCCN",
    min_ph=-3.0,
@@ -84,22 +111,7 @@ dimorphite_dl.run(
 )
 print("Output of first test saved to output.smi...")
 
-# Using the dimorphite_dl.run_with_mol_list() function, you can also pass a
-# list of RDKit Mol objects. The first argument is always the list.
-smiles = ["C[C@](F)(Br)CC(O)=O", "CCCCCN"]
-mols = [Chem.MolFromSmiles(s) for s in smiles]
-for i, mol in enumerate(mols):
-    mol.SetProp("msg","Orig SMILES: " + smiles[i])
 
-protonated_mols = dimorphite_dl.run_with_mol_list(
-    mols,
-    min_ph=5.0,
-    max_ph=9.0,
-)
-print([Chem.MolToSmiles(m) for m in protonated_mols])
-
-# Note that properties are preserved.
-print([m.GetProp("msg") for m in protonated_mols])
 ```
 
 Caveats
