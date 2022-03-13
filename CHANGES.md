@@ -9,6 +9,7 @@ to maintain
 * Moved the site_substructure smarts file into a one string with a textwrap dependency
 * Added PyPi basic setup infrastructure with MANIFEST.in, requirements.txt, and setup.py. Maintained the Apache License.
 * Added the rdkit -pypi dependency. 
+* Lost a sanity check because of the fileno dependency for IDLE. Will figure out another way soon.
 
 1.2.4
 -----

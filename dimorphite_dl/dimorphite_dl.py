@@ -388,18 +388,18 @@ class UtilFuncs:
         # Now convert to a mol object. Note the trick that is necessary to
         # capture RDKit error/warning messages. See
         # https://stackoverflow.com/questions/24277488/in-python-how-to-capture-the-stdout-from-a-c-shared-library-to-a-variable
-        stderr_fileno = sys.stderr.fileno()
-        stderr_save = os.dup(stderr_fileno)
-        stderr_pipe = os.pipe()
-        os.dup2(stderr_pipe[1], stderr_fileno)
-        os.close(stderr_pipe[1])
+        # stderr_fileno = sys.stderr.fileno()
+        # stderr_save = os.dup(stderr_fileno)
+        # stderr_pipe = os.pipe()
+        # os.dup2(stderr_pipe[1], stderr_fileno)
+        # os.close(stderr_pipe[1])
 
         mol = Chem.MolFromSmiles(smiles_str)
-
-        os.close(stderr_fileno)
-        os.close(stderr_pipe[0])
-        os.dup2(stderr_save, stderr_fileno)
-        os.close(stderr_save)
+        #
+        # os.close(stderr_fileno)
+        # os.close(stderr_pipe[0])
+        # os.dup2(stderr_save, stderr_fileno)
+        # os.close(stderr_save)
 
         # Check that there are None type errors Chem.MolFromSmiles has
         # sanitize on which means if there is even a small error in the SMILES
