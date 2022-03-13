@@ -543,7 +543,7 @@ class ProtonateEngine(object):
                 # sites are handled.
                 new_mols = ProtSubstructFuncs.protonate_site(new_mols, site)
                 if len(new_mols) > self.args["max_variants"]:
-                    new_mols = new_mols[: self.max_variants]
+                    new_mols = new_mols[: self.args["max_variants"] ]
                     UtilFuncs.eprint(
                             "WARNING: Limited number of variants to "
                             + str(self.args["max_variants"])
@@ -1338,7 +1338,6 @@ class TestFuncs:
             raise Exception(msg)
 
         if len(set([l[1] for l in output]) - set(labels)) != 0:
-            msg = (
                 args["smiles"]
                 + " not labeled as "
                 + " AND ".join(labels)
