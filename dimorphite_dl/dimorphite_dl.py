@@ -1255,7 +1255,7 @@ class TestFuncs:
             smi = example[0]
             for ph, expected_output in example[1:]:
                 output = list(
-                    Protonate(
+                    ProtonateEngine(
                         {
                             "smiles": smi,
                             "test": False,
@@ -1338,6 +1338,7 @@ class TestFuncs:
             raise Exception(msg)
 
         if len(set([l[1] for l in output]) - set(labels)) != 0:
+            msg = (
                 args["smiles"]
                 + " not labeled as "
                 + " AND ".join(labels)
