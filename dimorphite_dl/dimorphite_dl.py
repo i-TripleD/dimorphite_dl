@@ -1358,9 +1358,3 @@ class TestFuncs:
             + " => "
             + " AND ".join([l[0] for l in output])
         )
-
-if __name__ == '__main__':
-
-    dimorphite_dl = DimorphiteDL()
-    print(dimorphite_dl.protonate('CC(=O)O'))
-

@@ -25,7 +25,7 @@ else:
 # ----
 setup(
     name="dimorphite_dl",
-    version="1.2.5",
+    version="1.2.7",
     packages=find_packages(),
     license='Apache 2.0',
     author="Suliman Sharif",
