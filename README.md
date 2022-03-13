@@ -44,7 +44,9 @@ QuickStart
 
 ```python
 
-dimorphite_dl = DimorphiteDL()
+from dimorphite_dl import DimorphiteDL
+
+dimorphite_dl = DimorphiteDL(min_ph=4.5, max_ph=8.0)
 print(dimorphite_dl.protonate('CC(=O)O'))
 
 >>>
