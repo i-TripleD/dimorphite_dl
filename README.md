@@ -1,5 +1,5 @@
-Dimorphite-DL 1.2.5
-===================
+Dimorphite-DL
+=============
 
 What is it?
 -----------
