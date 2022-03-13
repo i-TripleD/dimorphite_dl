@@ -1,4 +1,4 @@
-Dimorphite-DL 1.2.4
+Dimorphite-DL 1.2.5
 ===================
 
 What is it?
