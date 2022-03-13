@@ -46,7 +46,14 @@ QuickStart
 
 from dimorphite_dl import DimorphiteDL
 
-dimorphite_dl = DimorphiteDL(min_ph=4.5, max_ph=8.0)
+dimorphite_dl = DimorphiteDL(
+
+    min_ph=4.5,
+    max_ph=8.0,
+    max_variants=128,
+    label_states=False,
+    pka_precision=1.0
+)
 print(dimorphite_dl.protonate('CC(=O)O'))
 
 >>>
