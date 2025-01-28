@@ -7,3 +7,4 @@ CONTRIBUTORS
 * Jacob Spiegel
 * Sara Yablonski
 * Suliman Sharif
+* André Stadelmann
